@@ -1,0 +1,604 @@
+:root {
+    --B_PADRAO: 2px dashed #000;
+}
+
+body {
+    background-image: url(/assets/img/backgrounds/levels.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* backdrop-filter: blur(5px); */
+}
+
+/* ########################## */
+/* ######### FASE 1 ######### */
+/* ########################## */
+
+
+#question-containerF1 {
+    width: 100%;
+    height: 85%;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px outset rgba(177, 177, 177, 0.5);
+    border-radius: 5px;
+    background: rebeccapurple;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#questionF1 {
+    width: 85%;
+    height: 150px;
+    font-size: 90px;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0px;
+    color: #000;
+
+    border: 3px inset rgba(177, 177, 177, 0.5);
+    border-radius: 15px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 10px rgba(0, 0, 0, .5);
+    background: #ccc;
+}
+
+#optionsF1 {
+    width: 85%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+}
+
+.optionF1 {
+    width: 80px;
+    height: 80px;
+    font-size: 35px;
+    font-weight: 600;
+    /* font-family: VT323, sans-serif; */
+    margin-bottom: 2rem;
+    color: #000;
+    border: 5px outset rgb(151, 150, 150);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.optionF1:active {
+    transform: scale(0.97);
+}
+
+#next-btnF1 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #ccc;
+    font-family: VT323, sans-serif;
+    font-size: 1.25em;
+    margin: 0 auto;
+}
+
+.correct-option {
+    background-color: rgb(3, 202, 3);
+    color: white;
+}
+
+.incorrect-option {
+    background-color: red;
+    color: white;
+}
+
+/* *****************************
+            FASE 2 
+****************************** */
+
+
+#phase2 h1 {
+    margin-bottom: 1em;
+}
+
+.challengeF2 {
+    width: 100%;
+    height: 10em;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    border: 2px dashed #000;
+    border-radius: 10px;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilize os elementos de texto no desafio */
+.challengeF2 p {
+    width: 80%;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #333;
+    /* background-color: #f0f0f0; */
+}
+
+.challengeF2 img {
+    height: 100%;
+}
+
+/* Estilize o contêiner das opções */
+.optionsF2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1em;
+}
+
+/* Estilize os botões de opção */
+.optionsF2 button {
+    width: 150px;
+    height: 60px;
+    /* font-family: var(--VT323); */
+    font-size: 2em;
+    background-color: #d95700;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.optionsF2 button:hover {
+    background-color: #b33300;
+}
+
+/* Estilize o contêiner de resultado */
+.resultF2 {
+    text-align: center;
+    /* margin: 20px auto; */
+}
+
+/* Estilize o texto do resultado */
+.resultF2 p {
+    font-size: 20px;
+    color: #000;
+}
+
+/* Estilize o botão "Próximo Desafio" */
+#next-buttonF2 {
+    display: none;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilize o botão "Próximo Desafio" quando passar o mouse sobre ele */
+#next-buttonF2:hover {
+    background-color: #45a049;
+}
+
+/* ******************************************************** */
+/* ******************************************************** */
+
+/* FASE 3 */
+
+#phase3 h1 {
+    margin-bottom: .25em;
+    /* font-size: 3em; */
+    /*font-family: Mystery Quest, sans-serif;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    color: #fff; */
+}
+
+.scene {
+    height: 85%;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+
+.card-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-box .op {
+    padding: 20px;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: #000;
+    border: 2px dashed #000;
+    border-radius: 5px;
+    background-color: rgba(31, 149, 252, 0.8);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-box .card {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s;
+    border: 2px dashed #000;
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705); */
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.card-box .card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+    background-color: rgba(31, 149, 252, 0.8);
+}
+
+.first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.first-content img {
+    width: 120px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.avatarInfo {
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first-content .avatar {
+    font-size: 1em;
+}
+
+.first-content .tip {
+    font-size: .5em;
+    font-weight: 400;
+}
+
+.card-box .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+}
+
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    transform: rotate(90deg) scale(-1);
+}
+
+.second-content p {
+    font-size: 2em;
+}
+
+.second-content span {
+    font-size: 1.5em;
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+}
+
+.questionF3 {
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px dashed #000;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.questionF3 p {
+    font-size: 1.5em;
+    font-weight: 500;
+    /* color: #333; */
+}
+
+.answerF3 {
+    width: 80%;
+    height: 40px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+#answerInputF3 {
+    width: 200px;
+    height: 100%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #777;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+#checkButtonF3 {
+    height: 100%;
+    background-color: rgb(0, 116, 217);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.resultF3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ************************
+            FASE 4
+************************* */
+
+.sceneF4 {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 20px;;
+    border-radius: 5px;
+    background: skyblue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sequenceF4 {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: skyblue;
+}
+
+.sequenceF4 div {
+    width: 85px;
+    height: 85px;
+    padding: 5px;
+    font-size: 3.5em;
+    border-radius: 5px;
+    background-color: #fff;
+    /* text-shadow: 0px 0px 5px #2e1b5b; */
+}
+
+.numberF4 {
+    color: #2e1b5b;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px inset slategray;
+    font-weight: 600;
+    /* box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3); */
+}
+
+.numberF4 p {
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px #2e1b5b;
+}
+
+.dropzone {
+    background-color: #ccc;
+    color: #333;
+    border: 2px dashed #333;
+}
+
+.resultF4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.optionsF4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.optionsF4 .numberF4 {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2e1b5b;
+    border: 2px dashed #000;
+    cursor: pointer;
+}
+
+.optionsF4 .draggable {
+    background-color: #0074d9;
+    color: #fff;
+}
+
+
+
+/* ******************************************************** */
+/* ******************************************************** */
+
+/* --- FASE 5 */
+
+.sceneF5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.ph5-problem {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: skyblue;
+}
+
+.library img {
+    width: 125px;
+    margin: 20px;
+    animation: floatLibrary 2s infinite;
+}
+
+@keyframes floatLibrary {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.questionF5 {
+    height: auto;
+    margin-right: 5px;
+    font-size: 20px;
+    background-color: #fff;
+    border: 2px dashed #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container-answer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+#answerInputF5 {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    font-size: 35px;
+    text-align: center;
+
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+}
+
+#answerInputF5::placeholder {
+    font-size: 25px;
+    text-align: center;
+}
+
+#answerInputF5:focus {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+#answerInputF5:focus#answerInputF5::placeholder {
+    color: transparent;
+}
+
+#checkButtonF5 {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.resultF5 {
+    font-size: 22.5px;
+    font-weight: 600;
+    text-align: center;
+}

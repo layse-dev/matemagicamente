@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adição | MATEMAGICAMENTE</title>
+    <link rel="shortcut icon" href="/assets/images/book.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/adicao.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <div class="nav-controls">
+        <a href="index.html" class="back-home controls" title="Página Inicial">
+            <span class="material-symbols-rounded"> home </span>
+        </a>
+        <a href="menu.html" class="back-menu controls" title="Menu - Níveis">
+            <span class="material-symbols-rounded"> menu </span>
+        </a>
+    </div>
+
+    <main class="container">
+
+        <section class="info-box">
+            <div class="card">
+                <div class="infos">
+                    <div class="image" id="player-character">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <div>
+                            <p class="name" id="player-name">
+
+                            </p>
+                            <p class="function">
+                                Matemágico
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <img src="assets/images/star.png" class="star" alt="Estrelas">
+                            <p class="flex flex-col">
+                                Estrelas
+                                <span id="stars-score">
+                                    XX
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phaseProgress" id="phaseProgress">
+                <a class="btn-phase" href="#phase1"> Fase 1 </a>
+
+                <a class="btn-phase" href="#phase2">
+                    Fase 2
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase3">
+                    Fase 3
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase4">
+                    Fase 4
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase5">
+                    Fase 5
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- CONTAINER PHASES-->
+        <section class="phase-container">
+
+            <!-- fase 1 -->
+            <div id="phase1" class="phase">
+
+                <h1>Matemágica das Continhas!!!</h1>
+                <div id="question-containerF1">
+                    <p id="questionF1"></p>
+                    <div id="optionsF1">
+                        <button class="optionF1"></button>
+                        <button class="optionF1"></button>
+                        <button class="optionF1"></button>
+                    </div>
+                    <button id="next-btnF1" style="display: none;">Próxima Questão</button>
+                </div>
+
+                <!-- MODAL -->
+
+                <div id="ph1-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 1 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph1-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph1-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 2
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 1 -->
+
+            <!-- fase 2 -->
+            <div id="phase2" class="phase" style="display: none;">
+
+                <h1>Hora de testar sua interpretação!</h1>
+                <div class="challengeF2">
+                    <p>Se você tiver <span id="current-money">R$ 25</span> e ganhar mais <span id="extra-money">R$
+                            18</span>, quanto dinheiro você terá no total?</p>
+                    <img src="assets/img/actors/interrogation.png" alt="Ponto de Interrogação">
+                </div>
+                <div class="optionsF2">
+                    <button class="opF2-1">R$ 53</button>
+                    <button class="opF2-2">R$ 43</button>
+                    <button class="opF2-3">R$ 42</button>
+                </div>
+                <div class="resultF2">
+                    <p id="result-textF2"></p>
+                </div>
+                <button id="next-buttonF2">Próximo Desafio</button>
+
+                <!-- MODAL -->
+                <div id="ph2-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 2 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph2-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph2-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 3
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+
+            </div> <!-- fim fase 2 -->
+
+            <!-- fase 3 -->
+            <div id="phase3" class="phase" style="display: none;">
+
+                <h1>Desafio das Figurinhas</h1>
+                <div class="scene">
+
+                    <div class="questionF3">
+                        <p>Maria tinha algumas figurinhas e ganhou mais de seu amigo João. Quantas figurinhas Maria tem
+                            agora?
+                        </p>
+                    </div>
+
+                    <div class="card-box">
+                        <div class="card">
+                            <div class="first-content">
+                                <img src="assets/img/actors/maria.png" alt="Maria">
+                                <div class="avatarInfo">
+                                    <p class="avatar">Maria</p>
+                                    <p class="tip">(Passe o mouse!)</p>
+                                </div>
+                            </div>
+                            <div class="second-content">
+                                <p> 48 </p>
+                                <span class="material-symbols-rounded"> playing_cards </span>
+                            </div>
+                        </div>
+
+                        <p class="op">+</p>
+
+                        <div class="card">
+                            <div class="first-content">
+                                <img src="assets/img/actors/joao.png" alt="Maria">
+                                <div class="avatarInfo">
+                                    <p class="avatar">João</p>
+                                    <p class="tip">(Passe o mouse!)</p>
+                                </div>
+                            </div>
+                            <div class="second-content">
+                                <p> 23 </p>
+                                <span class="material-symbols-rounded"> playing_cards </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="resultF3" id="resultF3">
+                        <!-- O resultado será exibido aqui -->
+                    </div>
+                    <div class="answerF3">
+                        <input type="number" id="answerInputF3" placeholder="Digite sua resposta">
+                        <button id="checkButtonF3">Verificar</button>
+                    </div>
+                </div> <!-- fim scene -->
+
+                <!-- MODAL -->
+                <div id="ph3-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 3 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph3-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph3-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 4
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 3 -->
+
+            <!-- fase 4 -->
+            <div id="phase4" class="phase" style="display: none;">
+
+                <h1>Quem vem depois?</h1>
+                <div class="sceneF4">
+                    <div class="sequenceF4">
+                        <div class="numberF4">3</div>
+                        <div class="numberF4">6</div>
+                        <div class="numberF4">9</div>
+                        <div class="numberF4 dropzoneF4"></div>
+                        <div class="numberF4 dropzoneF4"></div>
+                        <div class="numberF4 dropzoneF4"></div>
+                    </div>
+
+                    <div class="optionsF4">
+                        <div class="numberF4 draggableF4" draggable="true">12</div>
+                        <div class="numberF4 draggableF4" draggable="true">21</div>
+                        <div class="numberF4 draggableF4" draggable="true">24</div>
+                        <div class="numberF4 draggableF4" draggable="true">18</div>
+                        <div class="numberF4 draggableF4" draggable="true">27</div>
+                        <div class="numberF4 draggableF4" draggable="true">15</div>
+                    </div>
+                </div> <!-- fim scene -->
+
+                <!-- MODAL -->
+                <div id="ph4-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 4 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph4-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph4-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 5
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 4 -->
+
+            <!-- fase 5 -->
+            <div id="phase5" class="phase" style="display: none;">
+
+                <h1>Desafio da Biblioteca</h1>
+                <div class="sceneF5">
+                    <div class="ph5-problem">
+                        <div class="library">
+                            <img src="assets/img/actors/library.png" alt="Biblioteca">
+                        </div>
+                        <div class="questionF5">
+                            <p>Uma biblioteca recebeu 376 livros de literatura infantil. Como já possuía 1144 livros desse gênero no estoque, quantos livros de literatura infantil essa biblioteca passou a ter?</p>
+                        </div>
+                    </div>
+                    <div class="container-answer">
+                        <input type="number" id="answerInputF5" placeholder="Quantos livros de literatura? ...">
+                        <button id="checkButtonF5">Verificar</button>
+
+                        <div class="resultF5" id="resultF5">
+                            <!-- O resultado será exibido aqui -->
+                        </div>
+                    </div>
+                </div> <!-- fim scene -->
+
+                <!-- MODAL -->
+                <div id="ph5-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 5 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph5-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph5-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 6
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 5 -->
+
+        </section>
+    </main>
+
+    <!-- SCRIPT JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/adicao.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,631 @@
+:root {
+    --B_PADRAO: 2px dashed #000;
+}
+
+body {
+    background-image: url(/assets/images/bg_menu.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ######### FASE 1 ######### */
+
+#phase1 .tip {
+    width: fit-content;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    top: 25%;
+    left: 10%;
+
+    border-radius: 5px;
+}
+
+.tip span,
+.tip button {
+    font-size: 20px;
+}
+
+.tip-text {
+    width: 0px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.icon-tip {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-tip:hover {
+    background: #000;
+    color: #fff;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.icon-tip:focus~.tip-text {
+    width: fit-content;
+    height: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.ph1-game {
+    width: 100%;
+    height: 70%;
+    margin-top: 2em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ph1-question-box {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.ph1-q {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: #167fe0;
+}
+
+.ph1-q input {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+}
+
+.ph1-q p {
+    color: #000;
+}
+
+.ph1-q span {
+    visibility: hidden;
+    font-size: 30px;
+    color: #a1a1a1;
+    border-radius: 50%;
+    padding: 5px;
+    background: #fff;
+}
+
+.ph1-q span.correct {
+    color: green;
+}
+
+.ph1-btn-check {
+    width: 91.5%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(20, 255, 177);
+    border-radius: 5px;
+    color: rgb(19, 19, 19);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    padding-left: 25px;
+    transition-duration: .5s;
+}
+
+.ph1-btn-check span {
+    font-size: 20px;
+    transition-duration: 1.5s;
+}
+
+.ph1-btn-check:hover {
+    background-color: rgb(20, 255, 243);
+    transition-duration: .5s;
+}
+
+.ph1-btn-check:focus {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.ph1-btn-check:focus span {
+    transform: rotate(540deg);
+    transition-duration: 1.5s;
+}
+
+/* ######### FASE 2 ######### */
+
+#phase2 h1 {
+    font-size: 3em;
+    color: orangered;
+}
+
+.ph2-game {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph2-game p {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: orangered;
+}
+
+.ph2-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.ph2-content .carrot-box {
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-content: space-around;
+    gap: 20px;
+    border-radius: 5px;
+    background: rgba(153, 205, 50, 0.5);
+}
+
+.carrot-box .carrot {
+    width: 45px;
+    height: 45px;
+    cursor: grab;
+}
+
+.carrot:hover {
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.carrot:active {
+    cursor: grabbing;
+}
+
+.ph2-content .bunny-box {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bunny-box .bunny {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.bunny .basket-carrots {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px dashed green;
+}
+
+.basket-carrots .carrotDrop {
+    width: calc(100% / 4);
+    height: auto;
+    cursor: pointer;
+}
+
+.bunny img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+/* ######### FASE 3 ######### */
+
+.ph3-game {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.ph3-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ph3-content .kids-box {
+    width: 100%;
+    height: 85%;
+    padding: 10px;
+    margin: 10px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: palegreen;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(0, 0, 0, 0.116);
+}
+
+.kids-box .kid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.kid img {
+    /* width: 100px; */
+    height: 120px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.kid p {
+    font-size: 20px;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.ph3-answer-box {
+    width: 50%;
+    height: 150px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    background: palevioletred;
+    /* color: rgba(247, 60, 60, 0.884); */
+}
+
+.ph3-answer-box .ph3-input-answer {
+    width: 90%;
+    height: 90%;
+    font-size: 25px;
+    text-align: center;
+    gap: 10px;
+
+    border: none;
+    border-bottom: 1px solid #005204;
+    outline: none;
+    background: palegreen;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.ph3-answer-box .ph3-input-answer:focus {
+    background: rgb(133, 255, 133);
+}
+
+.ph3-btn-verify {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(134, 63, 122);
+    border-radius: 5px;
+    color: rgb(118, 206, 35);
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(0, 0, 0, 0.116);
+    padding-left: 25px;
+    transition-duration: .5s;
+}
+
+.ph3-btn-verify:hover {
+    background-color: rgb(134, 63, 100);
+    transition-duration: .5s;
+}
+
+.ph3-btn-verify:focus {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.ph3-btn-verify:focus span {
+    transform: rotate(540deg);
+    transition-duration: 1.5s;
+}
+
+/* ######### FASE 4 ######### */
+
+.ph4-game {
+    width: fit-content;
+    height: 100%;
+    user-select: none;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 3px outset rgb(134, 63, 122);
+    border-radius: 15px;
+    background: rgb(190, 79, 224);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 5px rgba(0, 0, 0, 0.116);
+}
+
+.ph4-game h2 {
+    color: #000;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.ph4-pieces-container {
+    width: 270px;
+    height: 270px;
+    border: 1px inset rgb(134, 63, 122);
+    border-radius: 5px;
+    background-image: url(/assets/images/bg-d-ph4.gif);
+    background-size: cover;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.ph4-pieces-container .pieces {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px inset rgb(134, 63, 122);
+    color: #000;
+    background: #89e6bf;
+}
+
+.pieces:nth-child(1) {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.pieces:nth-child(3) {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.pieces:nth-child(7) {
+    border-radius: 0px 0px 0px 5px;
+}
+
+.pieces:nth-child(9) {
+    border-radius: 0px 0px 5px 0px;
+}
+
+.pieces:hover {
+    background: #66be9a;
+    color: #000;
+    cursor: pointer;
+}
+
+.pieces:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.ph4-exp-display {
+    width: 270px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px inset rgb(128, 172, 42);
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 5px rgba(0, 0, 0, .5);
+    background: yellowgreen;
+}
+
+.ph4-expression {
+    display: none;
+}
+
+.ph4-expression:nth-child(1) {
+    display: flex;
+}
+
+/* ######### FASE 5 ######### */
+
+.ph5-game {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.ph5-problem {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 5px;
+    background: orange;
+}
+
+.ph5-questions {
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ph5-q {
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: skyblue;
+}
+
+.ph5-q p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.box-input {
+    width: 80%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.box-input button {
+    width: 40px;
+    height: 40px;
+
+    font-weight: 500;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    background: #ccc;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.box-input button span {
+    font-size: 20px;
+}
+
+.box-input button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.box-input button:active {
+    transform: scale(0.97);
+    font-size: 18px;
+    transition: all .1s ease-in-out;
+}
+
+.box-input button:active span {
+    font-size: 18px;
+    transition: all .1s ease-in-out;
+}
+
+
+.box-input input[type="number"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+    transition: all .3s ease-in-out;
+}

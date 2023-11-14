@@ -1,0 +1,604 @@
+:root {
+    --B_PADRAO: 2px dashed #000;
+}
+
+body {
+    background-image: url(/assets/images/bg_menu.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+button {
+    font-family: var(--VT323);
+}
+
+/* ########################## */
+/* ######### FASE 1 ######### */
+/* ########################## */
+
+.ph1-game-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph1-question {
+    width: 80%;
+    height: 180px;
+    margin-bottom: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    gap: 1em;
+    border-radius: 5px;
+    border: var(--B_PADRAO);
+}
+
+.ph1-question div {
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background: #ccc;
+}
+
+.ph1-question p {
+    font-size: 3.5em;
+}
+
+.ph1-options-box {
+    width: 80%;
+    height: auto;
+    margin-bottom: 1.5em;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+
+    /* pointer-events: auto; */
+}
+
+.ph1-options-box div {
+    width: 80px;
+    height: 60px;
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background: #ccc;
+    cursor: pointer;
+    /* pointer-events: auto; */
+}
+
+.ph1-options-box div:hover {
+    background: #aaa;
+}
+
+.disabled-option {
+    pointer-events: none;
+}
+
+button.next-exp {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    border: none;
+    border-radius: 5px;
+    background: #ccc;
+
+}
+
+button.next-exp:focus {
+    background: rgb(200, 50, 205);
+}
+
+/* ########################## */
+/* ######### FASE 2 ######### */
+/* ########################## */
+
+
+#phase2 h1 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+.ph2-game-container {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    margin-top: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border-radius: 5px;
+    background-color: #ffd000;
+}
+
+.ph2-game-container .ph2-question {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    border-radius: 5px;
+}
+
+.ph2-question .sequence {
+    width: 80%;
+    height: 20%;
+    padding: .25em;
+    font-size: 2.5em;
+    font-weight: bold;
+    flex-wrap: nowrap;
+    aspect-ratio: 3/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sequence .s-answer {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: var(--B_PADRAO);
+}
+
+.ph2-options-box {
+    width: fit-content;
+    height: 85%;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+
+    justify-content: space-evenly;
+    align-content: center;
+    border: var(--B_PADRAO);
+    border-radius: 5px;
+}
+
+.ph2-options-box p {
+    text-align: center;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.ph2-options-box div {
+    width: 70px;
+    height: 70px;
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    border-radius: 5px;
+    background: #000;
+    /* box-shadow: inset 0px 0px 5px rgba(255, 240, 29, 1); */
+    cursor: pointer;
+}
+
+.ph2-options-box div:hover {
+    color: #000;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    cursor: grab;
+}
+
+
+/* ########################## */
+/* ######### FASE 3 ######### */
+/* ########################## */
+
+.ph3-game-container {
+    width: 100%;
+    height: 80%;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph3-game-container .ph3-question {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+.ph3-card {
+    width: 200px;
+    height: 100%;
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: var(--B_PADRAO);
+    border-radius: 5px;
+}
+
+.ph3-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.ph3-card p {
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#ph3-input-answer {
+    width: 50%;
+    height: 50px;
+    font-family: var(--VT323);
+    font-size: 1.75em;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+
+    border: 1px solid #777;
+    border-radius: 5px;
+
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+#ph3-input-answer::placeholder {
+    color: #777;
+}
+
+#ph3-input-answer:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ########################## */
+/* ######### FASE 4 ######### */
+/* ########################## */
+
+.ph4-game-container {
+    width: 100%;
+    height: 80%;
+    margin-top: 1em;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    border-radius: 5px;
+    background-color: #11c0cc;
+    border: var(--B_PADRAO);
+}
+
+.ph4-card,
+.ph4-card-answer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    background: #fff;
+    transition: .25s;
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.ph4-card:hover,
+.ph4-card-answer:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ph4-card::after,
+.ph4-card-answer::after {
+    content: "🧠";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    /* opacity: .6; */
+    transition: .25s;
+    transform: rotateY(0deg);
+    background: rgb(255, 255, 255);
+}
+
+.ph4-card.is-flipped,
+.ph4-card-answer.is-flipped {
+    transform: rotateY(0deg);
+}
+
+.is-flipped::after {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.reset {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #11c0cc;
+    background: #fff;
+    border-radius: 5px;
+    border: var(--B_PADRAO);
+    cursor: pointer;
+}
+
+.reset:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reset:focus {
+    color: #000;
+    background: #11c0cc;
+}
+
+/* ########################## */
+/* ######### FASE 5 ######### */
+/* ########################## */
+
+.ph5-game-container {
+    width: 100%;
+    height: 90%;
+    /* margin-top: 20px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border-radius: 5px;
+}
+
+.ph5-game-container .ph5-question {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph5-question p {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.sentence-container {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+.ph5-exp-box {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    border: var(--B_PADRAO);
+    border-radius: 5px;
+}
+
+.ph5-multiplication {
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ph5-multiplication:nth-child(2) {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.empty-space {
+    pointer-events: none;
+    background: #c5c5c5;
+    border: none    ;
+}
+
+.number,
+.operator,
+.erase,
+.empty-space {
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 30px;
+    font-weight: 600;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.empty-space, .operator {
+    pointer-events: none;
+    background: #c5c5c5;
+    border: none    ;
+}
+
+.erase {
+    border: none;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 10px 0px;
+}
+
+.ph5-options-box {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+
+    justify-items: center;
+    align-content: center;
+    /* border: var(--B_PADRAO); */
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.ph5-option {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 2px 2px 5px #919191,
+        -2px -2px 5px #525252;
+    cursor: grab;
+}
+
+.ph5-option:hover {
+    border: 1px solid white;
+}
+
+.ph5-option:active {
+    cursor: grabbing;
+    box-shadow: 1px 1px 5px #c5c5c5,
+        -1px -1px 5px #ffffff;
+}
+
+.ph5-option:nth-child(10) {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.ph5-game-container .check-sentence {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgb(20, 255, 177);
+    border-radius: 5px;
+    color: rgb(19, 19, 19);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    padding-left: 25px;
+    transition-duration: .5s;
+}
+
+.check-sentence span {
+    font-size: 20px;
+    transition-duration: 1.5s;
+}
+
+.check-sentence:hover {
+    background-color: rgb(20, 255, 243);
+    transition-duration: .5s;
+}
+
+.check-sentence:focus {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.check-sentence:focus span {
+    transform: rotate(360deg);
+    transition-duration: 1.5s;
+}

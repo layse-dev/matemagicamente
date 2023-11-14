@@ -1,0 +1,109 @@
+body {
+    background-image: url(/assets/images/bg_menu.png);
+    background-size: cover;
+    background-position-y: -1em;
+}
+
+.back-btn {
+    position: absolute;
+    top: 8%;
+    left: 2%;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #1c0041;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-btn span {
+    border: none;
+}
+
+.back-btn:hover span {
+    color: #08ac10;
+    transform: scale(1.1);
+}
+
+.menu {
+    width: 80%;
+    height: 85%;
+    padding: 2em;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    border: .25em solid #000;
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.menu h2 {
+    font-size: 1.55em;
+}
+
+.niveis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10em;
+    grid-row-gap: 2.5em;
+    
+    margin-top: 2em;
+}
+
+.niveis a {
+    width: 8em;
+    height: 3em;
+    padding: 1em;
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.niveis a:hover {
+    transform: scale(1.1);
+}
+
+.niveis :nth-child(1) {
+    background-image: url(/assets/images/bt_plus.png);
+}
+
+.niveis :nth-child(2) {
+    background-image: url(/assets/images/bt_minus.png);
+
+}
+.niveis :nth-child(3) {
+    background-image: url(/assets/images/bt_multiplied_by.png);
+}
+
+.niveis :nth-child(4) {
+    background-image: url(/assets/images/bt_division.png);
+}

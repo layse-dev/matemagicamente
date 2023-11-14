@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação | MATEMAGICAMENTE</title>
+    <link rel="shortcut icon" href="/assets/images/book.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/multiplicacao.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <div class="nav-controls">
+        <a href="index.html" class="back-home controls" title="Página Inicial">
+            <span class="material-symbols-rounded"> home </span>
+        </a>
+        <a href="menu.html" class="back-menu controls" title="Menu - Níveis">
+            <span class="material-symbols-rounded"> menu </span>
+        </a>
+    </div>
+
+    <main class="container">
+
+        <section class="info-box">
+            <div class="card">
+                <div class="infos">
+                    <div class="image" id="player-character">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <div>
+                            <p class="name" id="player-name">
+
+                            </p>
+                            <p class="function">
+                                Matemágico
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <img src="assets/images/star.png" class="star" alt="Estrelas">
+                            <p class="flex flex-col">
+                                Estrelas
+                                <span id="stars-score">
+                                    <!-- score of stars -->
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phaseProgress" id="phaseProgress">
+                <a class="btn-phase" href="#phase1">
+                    Fase 1
+                    <span class="material-symbols-rounded"> lock_open_right </span>
+                </a>
+
+                <a class="btn-phase" href="#phase2">
+                    Fase 2
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase3">
+                    Fase 3
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase4">
+                    Fase 4
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+
+                <a class="btn-phase" href="#phase5">
+                    Fase 5
+                    <span class="material-symbols-rounded"> lock </span>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- container fases multiplicação-->
+        <section class="phase-container">
+
+            <!-- fase 1 -->
+            <div id="phase1" class="phase">
+
+                <h1>A magia da multiplicação!!!</h1>
+
+                <div class="ph1-game-container">
+                    <!-- DISPLAY PH1 -->
+                    <div class="ph1-question">
+                        <div id="num-A" class="num-A"></div>
+                        <p>X</p>
+                        <div id="num-B" class="num-B"></div>
+                        <p>= ?</p>
+                    </div>
+
+                    <div class="ph1-options-box">
+                        <div class="ph1-option"></div>
+                        <div class="ph1-option"></div>
+                        <div class="ph1-option"></div>
+                    </div>
+
+                    <button type="button" class="next-exp">
+                        Próxima continha
+                        <span class="material-symbols-rounded"> arrow_forward </span>
+                    </button>
+
+                </div>
+
+                <div id="ph1-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 1 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph1-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph1-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 2
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+
+            </div> <!-- fim fase 1 -->
+
+            <!-- FASE 2 -->
+            <div id="phase2" class="phase" style="display: none;">
+
+                <h1>O segredo da sequência! 🤐</h1>
+
+                <div class="ph2-game-container">
+                    <!-- DISPLAY PH2 -->
+                    <div class="ph2-question">
+
+                        <div class="sequence" id="sequence1">
+                            <p>3 x 2 = </p>
+                            <spam class="s-answer drop-zone" data-s="6"></spam>
+                        </div> <!-- fim sequence1 -->
+
+                        <div class="sequence" id="sequence2">
+                            <p>5 x 4 = </p>
+                            <spam class="s-answer drop-zone" data-s="20"></spam>
+                        </div> <!-- fim sequence2 -->
+
+                        <div class="sequence" id="sequence3">
+                            <p>7 x 6 = </p>
+                            <spam class="s-answer drop-zone" data-s="42"></spam>
+                        </div> <!-- fim sequence3 -->
+
+                    </div> <!-- fim ph2-game-container -->
+
+                    <div class="ph2-options-box">
+
+                        <p>(Arraste o número)</p>
+
+                        <div class="ph2-option draggable" data-answer="9" draggable="true">9</div> <!-- op 1 -->
+                        <div class="ph2-option draggable" data-answer="6" draggable="true">6</div> <!-- op 2 OK -->
+                        <div class="ph2-option draggable" data-answer="18" draggable="true">18</div> <!-- op 3 -->
+                        <div class="ph2-option draggable" data-answer="20" draggable="true">20</div> <!-- op 4 OK-->
+                        <div class="ph2-option draggable" data-answer="9" draggable="true">48</div> <!-- op 5 -->
+                        <div class="ph2-option draggable" data-answer="42" draggable="true">42</div> <!-- op 6 OK -->
+
+                    </div> <!-- fim ph2-options-box -->
+
+                </div> <!-- fim ph2-question -->
+
+                <div id="ph2-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 2 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph2-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph2-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 3
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 2 -->
+
+            <!-- fase 3 -->
+            <div id="phase3" class="phase" style="display: none;">
+
+                <h1>Pensando bem!!! 🤔</h1>
+
+                <div class="ph3-game-container">
+                    <div class="ph3-question">
+
+                        <div class="ph3-card">
+                            <img src="assets/images/baú.png" alt="Baú">
+                            <p>VOCÊ TEM 4 BAÚS.</p>
+                        </div>
+                        
+                        <div class="ph3-card">
+                            <img src="assets/images/coin.png" alt="Moeda">
+                            <p>CADA BAÚ COM 9 MOEDAS.</p>
+                        </div>
+                    </div>
+
+                    <input type="number" id="ph3-input-answer" placeholder="Quantas moedas você tem?">
+                </div>
+
+
+                <!-- MODAL -->
+                <div id="ph3-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 3 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph3-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph3-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 4
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 3 -->
+
+            <!-- fase 4 -->
+            <div id="phase4" class="phase" style="display: none;">
+
+                <h1>Matemágica... MENTE!</h1>
+
+                <div class="ph4-game-container">
+                    
+                </div>
+
+                <!-- <button id="ph4-reset-ph4" class="reset">Reset Game</button> -->
+
+                <!-- MODAL -->
+                <div id="ph4-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 4 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph4-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph4-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Fase 5
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 4 -->
+
+            <!-- fase 5 -->
+            <div id="phase5" class="phase" style="display: none;">
+
+                <h1>FASE 5</h1>
+
+                <div class="ph5-game-container">
+                    
+                    <div class="ph5-question">
+                        <p>Uma máquina produz 26 peças por hora. Quantas peças são produzidas em 8 horas por essa máquina?</p>
+
+                    </div> <!-- fim ph5-question -->
+
+                    <div class="sentence-container">
+                        <div class="ph5-exp-box">
+                            <!-- estrutura de uma continha -->
+                            <div class="ph5-multiplication" id="multiplicand">
+                                <div class="empty-space"></div>
+                                <div class="number dropZone" id="num1" data-to-receive="2"></div>
+                                <div class="number dropZone" id="num2" data-to-receive="6"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase1">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div>
+
+                            <div class="ph5-multiplication" id="multiplier">
+                                <!-- simbolo mutiplicação -->
+                                <div class="empty-space"></div>
+                                <div class="operator" id="operator">x</div>
+                                <div class="number dropZone" id="num4" data-to-receive="8"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase2">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div>
+
+                            <div class="ph5-multiplication" id="product">
+                                <div class="number dropZone" id="num5" data-to-receive="2"></div>
+                                <div class="number dropZone" id="num6" data-to-receive="0"></div>
+                                <div class="number dropZone" id="num7" data-to-receive="8"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase3">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div> 
+                        </div> <!-- fim ph5-exp-box -->
+
+                        <div class="ph5-options-box">
+                            <!-- teclado numerico 0-9 -->
+                            <div type="button" class="ph5-option draggable" draggable="true" data="1">1</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="2">2</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="3">3</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="4">4</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="5">5</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="6">6</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="7">7</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="8">8</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="9">9</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="0">0</div>
+                        </div>
+                    </div>
+
+                    <!-- botão verificar continha -->
+                    <button type="button" class="check-sentence">
+                        Verificar
+                        <span class="material-symbols-rounded"> hourglass_top </span>
+                    </button>
+
+                </div> <!-- fim ph5-game-container -->
+
+                <!-- MODAL -->
+                <div id="ph5-modal" class="modal"> <!-- modal -->
+
+                    <div class="modal-content"> <!-- modal-content -->
+                        <p class="msg">
+                            FASE 5 COMPLETA!
+                            ✅
+                        </p>
+
+                        <div class="stars-point">
+                            <p>Estrelas:</p>
+                            <div class="score-stars">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-modal" id="ph5-btn-r">
+                                <span class="material-symbols-rounded"> restart_alt </span>
+                                Refazer
+                            </button>
+                            <button type="button" class="btn-modal" id="ph5-btn-n">
+                                <span class="material-symbols-rounded"> resume </span>
+                                Finalizar
+                            </button>
+                        </div>
+                    </div> <!-- fim modal-content -->
+                </div> <!-- fim modal -->
+
+            </div> <!-- fim fase 5 -->
+
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/multiplicacao.js"></script>
+</body>
+
+</html>
