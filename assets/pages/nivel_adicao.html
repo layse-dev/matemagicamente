@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adição | MATEMAGICAMENTE</title>
-    <link rel="shortcut icon" href="/assets/images/book.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/adicao.css">
+    <link rel="shortcut icon" href="../img/book.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/adicao.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -21,7 +21,7 @@
     <div class="cursor"></div>
 
     <div class="nav-controls">
-        <a href="index.html" class="back-home controls" title="Página Inicial">
+        <a href="/index.html" class="back-home controls" title="Página Inicial">
             <span class="material-symbols-rounded"> home </span>
         </a>
         <a href="menu.html" class="back-menu controls" title="Menu - Níveis">
@@ -38,7 +38,7 @@
                         <img src="" alt="">
                     </div>
                     <div class="info">
-                        <div>
+                        <div class="name-box">
                             <p class="name" id="player-name">
 
                             </p>
@@ -47,7 +47,7 @@
                             </p>
                         </div>
                         <div class="stats">
-                            <img src="assets/images/star.png" class="star" alt="Estrelas">
+                            <img src="../img/actors/star.png" class="star" alt="Estrelas">
                             <p class="flex flex-col">
                                 Estrelas
                                 <span id="stars-score">
@@ -61,7 +61,10 @@
             </div>
 
             <div class="phaseProgress" id="phaseProgress">
-                <a class="btn-phase" href="#phase1"> Fase 1 </a>
+                <a class="btn-phase" href="#phase1">
+                    Fase 1 
+                    <span class="material-symbols-rounded"> lock_open_right </span>
+                </a>
 
                 <a class="btn-phase" href="#phase2">
                     Fase 2
@@ -144,7 +147,7 @@
                 <div class="challengeF2">
                     <p>Se você tiver <span id="current-money">R$ 25</span> e ganhar mais <span id="extra-money">R$
                             18</span>, quanto dinheiro você terá no total?</p>
-                    <img src="assets/img/actors/interrogation.png" alt="Ponto de Interrogação">
+                    <img src="../img/actors/interrogation.png" alt="Ponto de Interrogação">
                 </div>
                 <div class="optionsF2">
                     <button class="opF2-1">R$ 53</button>
@@ -203,7 +206,7 @@
                     <div class="card-box">
                         <div class="card">
                             <div class="first-content">
-                                <img src="assets/img/actors/maria.png" alt="Maria">
+                                <img src="../img/actors/maria.png" alt="Maria">
                                 <div class="avatarInfo">
                                     <p class="avatar">Maria</p>
                                     <p class="tip">(Passe o mouse!)</p>
@@ -219,7 +222,7 @@
 
                         <div class="card">
                             <div class="first-content">
-                                <img src="assets/img/actors/joao.png" alt="Maria">
+                                <img src="../img/actors/joao.png" alt="Maria">
                                 <div class="avatarInfo">
                                     <p class="avatar">João</p>
                                     <p class="tip">(Passe o mouse!)</p>
@@ -339,7 +342,7 @@
                 <div class="sceneF5">
                     <div class="ph5-problem">
                         <div class="library">
-                            <img src="assets/img/actors/library.png" alt="Biblioteca">
+                            <img src="../img/actors/library.png" alt="Biblioteca">
                         </div>
                         <div class="questionF5">
                             <p>Uma biblioteca recebeu 376 livros de literatura infantil. Como já possuía 1144 livros desse gênero no estoque, quantos livros de literatura infantil essa biblioteca passou a ter?</p>
@@ -392,8 +395,8 @@
     </main>
 
     <!-- SCRIPT JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/adicao.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/adicao.js"></script>
 </body>
 
 </html>

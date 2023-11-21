@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/images/bg_menu.png);
+    background-image: url(../img/backgrounds/levels.png);
     background-size: cover;
     background-position-y: -1em;
 }
@@ -93,17 +93,17 @@ body {
 }
 
 .niveis :nth-child(1) {
-    background-image: url(/assets/images/bt_plus.png);
+    background-image: url(../img/buttons/btn-addition.png);
 }
 
 .niveis :nth-child(2) {
-    background-image: url(/assets/images/bt_minus.png);
+    background-image: url(../img/buttons/btn-subtraction.png);
 
 }
 .niveis :nth-child(3) {
-    background-image: url(/assets/images/bt_multiplied_by.png);
+    background-image: url(../img/buttons/btn-multiplication.png);
 }
 
 .niveis :nth-child(4) {
-    background-image: url(/assets/images/bt_division.png);
+    background-image: url(../img/buttons/btn-division.png);
 }

@@ -45,8 +45,6 @@ function runDivisionGame() {
         starsScore.innerHTML = JSON.parse(localStorage.getItem('div-stars-score'));
     }
 
-
-
     // -------------- FASE 1 ---------------
 
 

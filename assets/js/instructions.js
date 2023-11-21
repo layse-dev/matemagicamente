@@ -104,7 +104,7 @@ goMenu.onclick = function () {
 }
 
 goHome.onclick = function () {
-    window.location.href = "index.html";
+    window.location.href = "/index.html";
 }
 
 function characterOptions() {
@@ -137,7 +137,7 @@ function chooseCharacter() {
 
             const selectedCharacter = document.querySelector("#selectedCharacter img");
 
-            selectedCharacter.src = `assets/img/characters/${characterName}.png`;
+            selectedCharacter.src = `../img/characters/${characterName}.png`;
 
             console.log("Character:", characterName);
         });

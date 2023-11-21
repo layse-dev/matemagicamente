@@ -54,23 +54,10 @@ function playerInfo() {
     const character = localStorage.getItem('PlayerCharacter');
     console.log(character);
 
-    playerCharacter.src = `assets/img/characters/${character}.png`;
+    playerCharacter.src = `../img/characters/${character}.png`;
     if(character) {
         playerCharacter.classList.add("selected");
     }
-
-    // if (character == "max") {
-    //     playerCharacter.innerHTML = `<img src="assets/images/max.png" alt="Max, o guerreiro" class="selected">`;
-    // }
-
-    // if (character == "luna") {
-    //     playerCharacter.innerHTML = `<img src="assets/images/luna.png" alt="Luna, a Fadinha" class="selected">`;
-    // }
-
-    // if (character == "milo") {
-    //     playerCharacter.innerHTML = `<img src="assets/images/milo.png" alt="Milo, o Gato" class="selected">`;
-    // }
-
 }
 
 progressPhase();

@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(/assets/images/bg_menu.png);
+    background-image: url(../img/backgrounds/levels.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -445,7 +445,7 @@ body {
     height: 270px;
     border: 1px inset rgb(134, 63, 122);
     border-radius: 5px;
-    background-image: url(/assets/images/bg-d-ph4.gif);
+    background-image: url(../img/backgrounds/bg-ph4-division.gif);
     background-size: cover;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
     display: grid;

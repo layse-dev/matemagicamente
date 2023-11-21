@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(/assets/images/bg_menu.png);
+    background-image: url(../img/backgrounds/levels.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

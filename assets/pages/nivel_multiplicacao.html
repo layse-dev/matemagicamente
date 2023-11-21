@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subtração | MATEMAGICAMENTE</title>
-    <link rel="shortcut icon" href="/assets/images/book.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/subtracao.css">
+    <title>Multiplicação | MATEMAGICAMENTE</title>
+    <link rel="shortcut icon" href="../img/book.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/multiplicacao.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -21,11 +21,11 @@
     <div class="cursor"></div>
 
     <div class="nav-controls">
-        <a href="index.html" class="back-home controls" title="Página Inicial">
+        <a href="/index.html" class="back-home controls" title="Página Inicial">
             <span class="material-symbols-rounded"> home </span>
         </a>
-        <a href="menu.html" class="back-menu controls" title="Menu - Níveis"> <span class="material-symbols-rounded">
-                menu </span>
+        <a href="menu.html" class="back-menu controls" title="Menu - Níveis">
+            <span class="material-symbols-rounded"> menu </span>
         </a>
     </div>
 
@@ -38,7 +38,7 @@
                         <img src="" alt="">
                     </div>
                     <div class="info">
-                        <div>
+                        <div class="name-box">
                             <p class="name" id="player-name">
 
                             </p>
@@ -47,11 +47,11 @@
                             </p>
                         </div>
                         <div class="stats">
-                            <img src="assets/images/star.png" class="star" alt="Estrelas">
+                            <img src="../img/actors/star.png" class="star" alt="Estrelas">
                             <p class="flex flex-col">
                                 Estrelas
                                 <span id="stars-score">
-                                    XX
+                                    <!-- score of stars -->
                                 </span>
                             </p>
 
@@ -61,7 +61,10 @@
             </div>
 
             <div class="phaseProgress" id="phaseProgress">
-                <a class="btn-phase" href="#phase1"> Fase 1 </a>
+                <a class="btn-phase" href="#phase1">
+                    Fase 1
+                    <span class="material-symbols-rounded"> lock_open_right </span>
+                </a>
 
                 <a class="btn-phase" href="#phase2">
                     Fase 2
@@ -86,42 +89,37 @@
 
         </section>
 
-        <!-- CONTAINER PHASES -->
+        <!-- container fases multiplicação-->
         <section class="phase-container">
 
             <!-- fase 1 -->
             <div id="phase1" class="phase">
 
-                <h1>O segredo mora ao lado!</h1>
-                <div id="game-container">
-                    
-                    <div id="question-container">
-                        <div id="question">
-                            <div id="polygon-A" class="polygon-form" data-side-A=""></div>
-                            <p>-</p>
-                            <div id="polygon-B" class="polygon-form" data-side-B=""></div>
-                            <p>=?</p>
-                        </div>
+                <h1>A magia da multiplicação!!!</h1>
 
-                        <div class="option-container">
-                            <button class="option"></button>
-                            <button class="option"></button>
-                            <button class="option"></button>
-                            <button class="option"></button>
-                            <button class="option"></button>
-                        </div>
-                        <div id="feedback-container">
-                            <p id="feedback"></p>
-                            <button id="next-button" type="button">
-                                Próximo
-                            </button>
-                        </div>
-                    </div> <!-- fim question-container -->
-                </div> <!-- fim game-container -->
+                <div class="ph1-game-container">
+                    <!-- DISPLAY PH1 -->
+                    <div class="ph1-question">
+                        <div id="num-A" class="num-A"></div>
+                        <p>X</p>
+                        <div id="num-B" class="num-B"></div>
+                        <p>= ?</p>
+                    </div>
 
-                <!-- MODAL -->
+                    <div class="ph1-options-box">
+                        <div class="ph1-option"></div>
+                        <div class="ph1-option"></div>
+                        <div class="ph1-option"></div>
+                    </div>
 
-                <div id="ph1-modal" class="modal">
+                    <button type="button" class="next-exp">
+                        Próxima continha
+                        <span class="material-symbols-rounded"> arrow_forward </span>
+                    </button>
+
+                </div>
+
+                <div id="ph1-modal" class="modal"> <!-- modal -->
 
                     <div class="modal-content"> <!-- modal-content -->
                         <p class="msg">
@@ -151,42 +149,50 @@
                     </div> <!-- fim modal-content -->
                 </div> <!-- fim modal -->
 
+
             </div> <!-- fim fase 1 -->
 
-            <!-- fase 2 -->
+            <!-- FASE 2 -->
             <div id="phase2" class="phase" style="display: none;">
 
-                <h1>Desafio Subtrativo Triplamente Mágico</h1>
+                <h1>O segredo da sequência! 🤐</h1>
 
-                <div class="game-containerF2">
-                    <div class="challengeF2">
-                        <div id="sequence1" class="sequence">
-                            15 - 7 =
-                            <span id="answerS1" class="answerSequence"></span>
-                        </div>
-                        <div id="sequence2" class="sequence">
-                            20 - 9 =
-                            <span id="answerS2" class="answerSequence"></span>
-                        </div>
-                        <div id="sequence3" class="sequence">
-                            28 - 14 =
-                            <span id="answerS3" class="answerSequence"></span>
-                        </div>
-                    </div>
+                <div class="ph2-game-container">
+                    <!-- DISPLAY PH2 -->
+                    <div class="ph2-question">
 
-                    <div class="optionsF2">
-                        <div class="optionF2" data-answer="14" draggable="true">14</div>
-                        <div class="optionF2" data-answer="9" draggable="true">9</div>
-                        <div class="optionF2" data-answer="11" draggable="true">11</div>
-                        <div class="optionF2" data-answer="12" draggable="true">12</div>
-                        <div class="optionF2" data-answer="8" draggable="true">8</div>
-                        <div class="optionF2" data-answer="15" draggable="true">15</div>
-                    </div>
-                    <!-- <button id="fase3" class="fase3" style="display: none;">Fase 3</button> -->
-                </div>
-                <div id="message" class="message">Você acertou a sequência! Parabéns!!!</div>
+                        <div class="sequence" id="sequence1">
+                            <p>3 x 2 = </p>
+                            <spam class="s-answer drop-zone" data-s="6"></spam>
+                        </div> <!-- fim sequence1 -->
 
-                <!-- MODAL -->
+                        <div class="sequence" id="sequence2">
+                            <p>5 x 4 = </p>
+                            <spam class="s-answer drop-zone" data-s="20"></spam>
+                        </div> <!-- fim sequence2 -->
+
+                        <div class="sequence" id="sequence3">
+                            <p>7 x 6 = </p>
+                            <spam class="s-answer drop-zone" data-s="42"></spam>
+                        </div> <!-- fim sequence3 -->
+
+                    </div> <!-- fim ph2-game-container -->
+
+                    <div class="ph2-options-box">
+
+                        <p>(Arraste o número)</p>
+
+                        <div class="ph2-option draggable" data-answer="9" draggable="true">9</div> <!-- op 1 -->
+                        <div class="ph2-option draggable" data-answer="6" draggable="true">6</div> <!-- op 2 OK -->
+                        <div class="ph2-option draggable" data-answer="18" draggable="true">18</div> <!-- op 3 -->
+                        <div class="ph2-option draggable" data-answer="20" draggable="true">20</div> <!-- op 4 OK-->
+                        <div class="ph2-option draggable" data-answer="9" draggable="true">48</div> <!-- op 5 -->
+                        <div class="ph2-option draggable" data-answer="42" draggable="true">42</div> <!-- op 6 OK -->
+
+                    </div> <!-- fim ph2-options-box -->
+
+                </div> <!-- fim ph2-question -->
+
                 <div id="ph2-modal" class="modal"> <!-- modal -->
 
                     <div class="modal-content"> <!-- modal-content -->
@@ -222,20 +228,25 @@
             <!-- fase 3 -->
             <div id="phase3" class="phase" style="display: none;">
 
-                <h1>Pensando bem!?</h1>
+                <h1>Pensando bem!!! 🤔</h1>
 
-                <div class="containerF3">
-                    <div class="container-q">
-                        <img src="assets/img/actors/carlos.png" alt="Homem com cesta de ovos nas mãos.">
-                        <p>Carlos tinha 2 dúzias de ovos e deu 12 para seu amigo. Com quantos ovos Carlos ficou?</p>
+                <div class="ph3-game-container">
+                    <div class="ph3-question">
+
+                        <div class="ph3-card">
+                            <img src="../img/actors/baú.png" alt="Baú">
+                            <p>VOCÊ TEM 4 BAÚS.</p>
+                        </div>
+                        
+                        <div class="ph3-card">
+                            <img src="../img/actors/coin.png" alt="Moeda">
+                            <p>CADA BAÚ COM 9 MOEDAS.</p>
+                        </div>
                     </div>
-                    <div class="optionsF3">
-                        <button class="optionF3" id="option1">18 ovos</button>
-                        <button class="optionF3" id="option2">12 ovos</button>
-                        <button class="optionF3" id="option3">24 ovos</button>
-                    </div>
-                    <button id="checkButtonF3">Verificar Resposta</button>
-                </div> <!-- fim containerF3 -->
+
+                    <input type="number" id="ph3-input-answer" placeholder="Quantas moedas você tem?">
+                </div>
+
 
                 <!-- MODAL -->
                 <div id="ph3-modal" class="modal"> <!-- modal -->
@@ -273,29 +284,13 @@
             <!-- fase 4 -->
             <div id="phase4" class="phase" style="display: none;">
 
-                <h1>Didins contados!!!</h1>
+                <h1>Matemágica... MENTE!</h1>
 
-                <div id="containerF4">
-                    <div id="questionF4">
-                        <div class="box-card">
-                            <img src="" alt="Personagem" class="player-img">
-                            <div class="Card">
-                                <img src="assets/images/coin.png" alt="moedas" class="moedas">
-                                <p>Você tinha 45 reais!</p>
-                            </div>
-                            <div class="Card">
-                                <img src="assets/images/coin.png" alt="moedas" class="moedas">
-                                <p>Gastou 22,50 reais!</p>
-                            </div>
-                        </div>
-                        <p class="mainQ">Quanto dinheiro você tem agora?</p>
-                    </div>
-                    <div id="optionsF4">
-                        <button class="optionF4" >R$ 25,00</button>
-                        <button class="optionF4" >R$ 20,00</button>
-                        <button class="optionF4" >R$ 22,50</button>
-                    </div>
+                <div class="ph4-game-container">
+                    
                 </div>
+
+                <!-- <button id="ph4-reset-ph4" class="reset">Reset Game</button> -->
 
                 <!-- MODAL -->
                 <div id="ph4-modal" class="modal"> <!-- modal -->
@@ -332,17 +327,73 @@
 
             <!-- fase 5 -->
             <div id="phase5" class="phase" style="display: none;">
-                <h1>Contando os pontos :)</h1>
 
-                <div class="containerF5">
-                    <div id="questionF5">Para ser aprovado em matemática, Ricardo precisava tirar nota 9 na recuperação. Tendo tirado 6,75, quanto faltou para Ricardo ser aprovado?</div>
+                <h1>FASE 5</h1>
+
+                <div class="ph5-game-container">
                     
-                    <div class="boxAnswer">
-                        <input id="answerF5" type="number" step="0.01" min="0" max="10">
-                        <button id="f5-btn">Verificar resposta</button>
+                    <div class="ph5-question">
+                        <p>Uma máquina produz 26 peças por hora. Quantas peças são produzidas em 8 horas por essa máquina?</p>
+
+                    </div> <!-- fim ph5-question -->
+
+                    <div class="sentence-container">
+                        <div class="ph5-exp-box">
+                            <!-- estrutura de uma continha -->
+                            <div class="ph5-multiplication" id="multiplicand">
+                                <div class="empty-space"></div>
+                                <div class="number dropZone" id="num1" data-to-receive="2"></div>
+                                <div class="number dropZone" id="num2" data-to-receive="6"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase1">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div>
+
+                            <div class="ph5-multiplication" id="multiplier">
+                                <!-- simbolo mutiplicação -->
+                                <div class="empty-space"></div>
+                                <div class="operator" id="operator">x</div>
+                                <div class="number dropZone" id="num4" data-to-receive="8"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase2">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div>
+
+                            <div class="ph5-multiplication" id="product">
+                                <div class="number dropZone" id="num5" data-to-receive="2"></div>
+                                <div class="number dropZone" id="num6" data-to-receive="0"></div>
+                                <div class="number dropZone" id="num7" data-to-receive="8"></div>
+                                <!-- erase -->
+                                <div class="erase" id="erase3">
+                                    <span class="material-symbols-rounded"> backspace </span>
+                                </div>
+                            </div> 
+                        </div> <!-- fim ph5-exp-box -->
+
+                        <div class="ph5-options-box">
+                            <!-- teclado numerico 0-9 -->
+                            <div type="button" class="ph5-option draggable" draggable="true" data="1">1</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="2">2</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="3">3</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="4">4</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="5">5</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="6">6</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="7">7</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="8">8</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="9">9</div>
+                            <div type="button" class="ph5-option draggable" draggable="true" data="0">0</div>
+                        </div>
                     </div>
-                    <div id="feedbackF5"></div>
-                </div>
+
+                    <!-- botão verificar continha -->
+                    <button type="button" class="check-sentence">
+                        Verificar
+                        <span class="material-symbols-rounded"> hourglass_top </span>
+                    </button>
+
+                </div> <!-- fim ph5-game-container -->
 
                 <!-- MODAL -->
                 <div id="ph5-modal" class="modal"> <!-- modal -->
@@ -369,7 +420,7 @@
                             </button>
                             <button type="button" class="btn-modal" id="ph5-btn-n">
                                 <span class="material-symbols-rounded"> resume </span>
-                                Fase 6
+                                Finalizar
                             </button>
                         </div>
                     </div> <!-- fim modal-content -->
@@ -380,8 +431,8 @@
         </section>
     </main>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/subtracao.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/multiplicacao.js"></script>
 </body>
 
 </html>

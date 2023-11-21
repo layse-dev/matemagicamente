@@ -645,7 +645,7 @@ function runSubtractionGame() {
         const playerAvatar = localStorage.getItem("PlayerCharacter");
 
         const playerImg = document.querySelector(".player-img");
-        playerImg.src = `assets/img/characters/${playerAvatar}.png`;
+        playerImg.src = `../img/characters/${playerAvatar}.png`;
 
         const optionsF4 = document.querySelectorAll(".optionF4");
 
